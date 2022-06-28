@@ -4,32 +4,34 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'All Docs in One Place',
+    Svg: require('@site/static/img/file-cabinet-emoji.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Everything that YAM token holders need to make informed governance decisions
+        and vet proposals. Think of it as the DAO's governance filing cabinet.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Fully Open Source',
+    Svg: require('@site/static/img/robot-emoji.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Built to allow anyone to contribute using open source software and simple
+        developer workflows (Markdown and GitHub). Fork the repository to make sure 
+        you always have a copy.
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'Built by YAM for YAM',
+    Svg: require('@site/static/img/hammers-emoji.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        We are building tools to coordinate and fund projects that will move
+        YAM forward. This is a small start, but we are looking for "Do-ers" who 
+        are looking to tinker and build open source magic, and get paid to do it!
       </>
     ),
   },
