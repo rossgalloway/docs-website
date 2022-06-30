@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkgovernance_repository=self.webpackChunkgovernance_repository||[]).push([[104],{4469:function(e){e.exports=JSON.parse('{"name":"docusaurus-plugin-content-blog","id":"default"}')}}]);

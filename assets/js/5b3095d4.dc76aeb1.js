@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkgovernance_repository=self.webpackChunkgovernance_repository||[]).push([[5917],{1931:function(e){e.exports=JSON.parse('{"label":"hello","permalink":"/docs-website/blog/tags/hello","allTagsPath":"/docs-website/blog/tags","count":2}')}}]);
