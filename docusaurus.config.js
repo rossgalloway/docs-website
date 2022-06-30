@@ -124,6 +124,14 @@ const config = {
           },
         ],
       },
+      announcementBar: {
+        id: "announcement-bar",
+        content:
+          "This website is still being built and is in beta, please be patient. If you would like to help build it, come say hi in the discord",
+        // backgroundColor: "#00D184",
+        // textColor: "#d1004d",
+        isCloseable: false,
+      },
       footer: {
         style: "dark",
         links: [
