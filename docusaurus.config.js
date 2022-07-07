@@ -15,6 +15,11 @@ const siloDocs = listRemote.createRepo(
   'YAM-Project-Silos', 
   'master'
 )
+const replantedDocs = listRemote.createRepo(
+  "rossgalloway",
+  "YAM-Replanted-Docs",
+  "master"
+);
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -25,6 +30,7 @@ const config = {
   onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/yamfavicon.ico",
+  staticDirectories: ["static", "docs/replantedDocs", "docs/siloDocs"],
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -49,8 +55,8 @@ const config = {
         // options here
         name: "remote-silos", // used by CLI, must be path safe
         id: "remoteSilos",
-        outDir: "docs", // the base directory to output to.
-        // noRuntimeDownloads: "true",
+        outDir: "docs/siloDocs", // the base directory to output to.
+        //noRuntimeDownloads: "true",
 
         // helper function to reduce duplication
         // (as sourceBaseUrl can be built with information passed to `repo`)
@@ -65,6 +71,28 @@ const config = {
         ),
       },
     ],
+    [
+      "docusaurus-plugin-remote-content",
+      {
+        // options here
+        name: "yam-replanted", // used by CLI, must be path safe
+        id: "replanted",
+        outDir: "docs/replantedDocs", // the base directory to output to.
+        //noRuntimeDownloads: "true",
+
+        // helper function to reduce duplication
+        // (as sourceBaseUrl can be built with information passed to `repo`)
+        sourceBaseUrl: listRemote.buildRepoRawBaseUrl(replantedDocs),
+
+        // main usage: list remote files from the repo for a given list of path filters
+        // and optionally the second list of filters for files to be excluded
+        documents: listRemote.listDocuments(
+          replantedDocs,
+          ["*"],
+          ["iDontExist.md"]
+        ),
+      },
+    ],
   ],
 
   presets: [
@@ -74,6 +102,7 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
+          // sidebarCollapsed: false,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           //editUrl:
@@ -105,18 +134,28 @@ const config = {
         items: [
           {
             type: "doc",
-            docId: "silo-readme",
+            docId: "siloDocs/silo-readme",
             position: "left",
             label: "Project Silos",
           },
           {
             type: "doc",
-            docId: "silo-readme",
+            docId: "siloDocs/silo-readme",
             position: "left",
             label: "YIPs",
           },
+          {
+            type: "doc",
+            docId: "replantedDocs/replantedDocs",
+            position: "left",
+            label: "YAM Replanted",
+          },
 
-          { to: "/blog", label: "Blog", position: "left" },
+          {
+            to: "/blog",
+            label: "Blog",
+            position: "left",
+          },
           {
             href: "https://yam.finance",
             label: "Main YAM Website",
