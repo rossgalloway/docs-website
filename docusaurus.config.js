@@ -15,11 +15,13 @@ const siloDocs = listRemote.createRepo(
   'YAM-Project-Silos', 
   'master'
 )
+/*
 const replantedDocs = listRemote.createRepo(
   "rossgalloway",
   "YAM-Replanted-Docs",
   "master"
 );
+*/
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -30,7 +32,7 @@ const config = {
   onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/yamfavicon.ico",
-  staticDirectories: ["static", "docs/replantedDocs", "docs/siloDocs"],
+  staticDirectories: ["static", "docs/siloDocs"],
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -66,11 +68,12 @@ const config = {
         // and optionally the second list of filters for files to be excluded
         documents: listRemote.listDocuments(
           siloDocs,
-          ["*.md", "readme.*"],
-          ["iDontExist.md"]
+          ["*"],
+          [".gitignore"]
         ),
       },
     ],
+    /*
     [
       "docusaurus-plugin-remote-content",
       {
@@ -93,6 +96,7 @@ const config = {
         ),
       },
     ],
+    */
   ],
 
   presets: [
@@ -138,6 +142,7 @@ const config = {
             position: "left",
             label: "Project Silos",
           },
+          /*
           {
             type: "doc",
             docId: "siloDocs/silo-readme",
@@ -150,7 +155,7 @@ const config = {
             position: "left",
             label: "YAM Replanted",
           },
-
+          */
           {
             to: "/blog",
             label: "Blog",
