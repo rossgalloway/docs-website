@@ -15,20 +15,19 @@ const siloDocs = listRemote.createRepo(
   'YAM-Project-Silos', 
   'master'
 )
-/*
-const replantedDocs = listRemote.createRepo(
+
+const YAMDocs = listRemote.createRepo(
   "rossgalloway",
-  "YAM-Replanted-Docs",
+  "YAM-documentation",
   "master"
 );
-*/
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "YAM Governance Repository",
-  tagline: "Your one-stop shop for YAM Governance info",
+  title: "YAM Information Repository",
+  tagline: "Your one-stop shop for YAM Governance and Project info",
   url: "https://rossgalloway.github.io",
-  baseUrl: "/docs-website/",
+  baseUrl: "/",
   onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/yamfavicon.ico",
@@ -49,7 +48,7 @@ const config = {
     locales: ["en"],
   },
   */
-
+/*
   plugins: [
     [
       "docusaurus-plugin-remote-content",
@@ -73,32 +72,31 @@ const config = {
         ),
       },
     ],
-    /*
+
     [
       "docusaurus-plugin-remote-content",
       {
         // options here
-        name: "yam-replanted", // used by CLI, must be path safe
-        id: "replanted",
-        outDir: "docs/replantedDocs", // the base directory to output to.
+        name: "yam-docs", // used by CLI, must be path safe
+        id: "remoteDocs",
+        outDir: "docs/yamDocs", // the base directory to output to.
         //noRuntimeDownloads: "true",
 
         // helper function to reduce duplication
         // (as sourceBaseUrl can be built with information passed to `repo`)
-        sourceBaseUrl: listRemote.buildRepoRawBaseUrl(replantedDocs),
+        sourceBaseUrl: listRemote.buildRepoRawBaseUrl(YAMDocs),
 
         // main usage: list remote files from the repo for a given list of path filters
         // and optionally the second list of filters for files to be excluded
         documents: listRemote.listDocuments(
-          replantedDocs,
+          YAMDocs,
           ["*"],
-          ["iDontExist.md"]
+          ["old-docs/*", "Tutorials/github.md", "Tutorials/images/*", "readme.*"]
         ),
       },
     ],
-    */
   ],
-
+*/
   presets: [
     [
       "classic",
@@ -130,17 +128,23 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: "YAM Governance Repository",
+        title: "YAM Information Repository",
         logo: {
-          alt: "My Site Logo",
+          alt: "YAM emoji logo",
           src: "img/yam-emoji-windows.png",
         },
         items: [
           {
             type: "doc",
+            docId: "yamDocs/docStart",
+            position: "left",
+            label: "YAM Documentation",
+          },
+          {
+            type: "doc",
             docId: "siloDocs/silo-readme",
             position: "left",
-            label: "Project Silos",
+            label: "Silo and Grant Documents",
           },
           /*
           {
@@ -148,12 +152,6 @@ const config = {
             docId: "siloDocs/silo-readme",
             position: "left",
             label: "YIPs",
-          },
-          {
-            type: "doc",
-            docId: "replantedDocs/replantedDocs",
-            position: "left",
-            label: "YAM Replanted",
           },
           */
           {

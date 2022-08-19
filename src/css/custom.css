@@ -31,11 +31,14 @@ html[data-theme='dark'] .navbar {
 }
 
 html[data-theme='light'] .footer {
-  background-color: #3a2027;
+  background-color: #ffffff;
+  --ifm-footer-color: var(--ifm-color-gray-700);
+  --ifm-footer-link-color: var(--ifm-color-gray-700);
+  --ifm-footer-title-color: var(--ifm-color-gray-700);
 }
 
 html[data-theme='light'] .clean-btn {
-  color: #ffffff;
+  color: var(--ifm-color-gray-100);
 }
 
 html[data-theme='dark'] .clean-btn {
@@ -43,10 +46,7 @@ html[data-theme='dark'] .clean-btn {
 }
 
 html[data-theme='dark'] .footer {
-  background-color: #ffffff;
-  --ifm-footer-color: var(--ifm-color-gray-700);
-  --ifm-footer-link-color: var(--ifm-color-gray-700);
-  --ifm-footer-title-color: var(--ifm-color-gray-700);
+  background-color: #201519;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
