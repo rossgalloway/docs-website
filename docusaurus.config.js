@@ -27,7 +27,7 @@ const config = {
   title: "YAM Information Repository",
   tagline: "Your one-stop shop for YAM Governance and Project info",
   url: "https://rossgalloway.github.io",
-  baseUrl: "/",
+  baseUrl: "/docs-website/",
   onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/yamfavicon.ico",
@@ -48,7 +48,7 @@ const config = {
     locales: ["en"],
   },
   */
-/*
+
   plugins: [
     [
       "docusaurus-plugin-remote-content",
@@ -96,7 +96,7 @@ const config = {
       },
     ],
   ],
-*/
+
   presets: [
     [
       "classic",
