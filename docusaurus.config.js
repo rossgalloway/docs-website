@@ -48,7 +48,7 @@ const config = {
     locales: ["en"],
   },
   */
-
+/*
   plugins: [
     [
       "docusaurus-plugin-remote-content",
@@ -96,7 +96,7 @@ const config = {
       },
     ],
   ],
-
+*/
   presets: [
     [
       "classic",
@@ -137,13 +137,13 @@ const config = {
           {
             type: "doc",
             docId: "yamDocs/docStart",
-            position: "left",
+            /*position: "left",*/
             label: "YAM Documentation",
           },
           {
             type: "doc",
             docId: "siloDocs/silo-readme",
-            position: "left",
+            /*position: "left",*/
             label: "Silo and Grant Documents",
           },
           /*
@@ -157,7 +157,7 @@ const config = {
           {
             to: "/blog",
             label: "Blog",
-            position: "left",
+            /*position: "left",*/
           },
           {
             href: "https://yam.finance",
