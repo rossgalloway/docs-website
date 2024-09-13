@@ -1,0 +1,4 @@
+position: 10 # float position is supported
+label: 'Grant-001'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
